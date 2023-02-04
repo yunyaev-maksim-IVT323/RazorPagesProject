@@ -3,9 +3,17 @@
 @{
 }
 <h1>qwetreqrter</h1>
-<h1>@foreach (var a in Model.Images)
+<div id="containerr" >
+    
+    @foreach (var img in Model.Images)
     {
-        <h1>@a.Id; @a.Path;</h1>
-        
+        var photoPath = $"/all_images/{img.Path}";
+        <img src="@photoPath" class="bead">
     }
-</h1>
+    
+
+</div>
+<button type="button" name="popup-button">Загрузить</button>
+<div id='playa' style="background-color: palevioletred"></div>
+<div class="qwe">wrgfddddddddd</div>
+<script src="~/js/site.js" asp-append-version="true"></script>

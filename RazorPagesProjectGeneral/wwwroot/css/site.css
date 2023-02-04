@@ -16,3 +16,48 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/////////
+
+#containerr {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 5px inset black;
+    overflow-x: scroll;
+    background: red;
+    background-color: aquamarine;
+    
+    /*скрыть полосу прокрутки*/
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#container::-webkit-scrollbar {
+    display: none;
+}
+
+#playa {
+    width: 100%;
+    height: 100%;
+    /*height: 150px;*/
+    /*box-shadow: 0 0 5px inset black;*/
+    color: aqua;
+    background-color: red;
+}
+
+img {
+    height: 75px;
+    margin: 10px;
+}
+
+.imgCopy {
+    position: absolute;
+}
+
+button {
+    color: orangered;
+}
+
+.qwe {
+    background-color: navy;
+}

@@ -14,9 +14,8 @@ namespace RazorPagesProject.Services
         {
             ImageList = new List<Image>()
             {
-                new Image() { Id = 0, Path = "dsaf"},
-                new Image() { Id = 1, Path = "qwer" },
-                new Image() { Id = 2, Path = "xcvz" },
+                new Image() { Id = 0, Path = "truba1.png"},
+                new Image() { Id = 1, Path = "truba2.jpg" },
             };
         }
         public IEnumerable<Image> GetAllImages()
