@@ -10,5 +10,7 @@ namespace RazorPagesProject.Services
     public interface IImageRepository
     {
         public IEnumerable<Image> GetAllImages();
+        public Image GetImage(int id);
+        public Image AddImage(Image newImage);
     }
 }

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPagesProjectGeneral", "RazorPagesProjectGeneral\RazorPagesProjectGeneral.csproj", "{032ED958-A220-4072-95B1-2C17671FF15A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPagesProjectGeneral", "RazorPagesProjectGeneral\RazorPagesProjectGeneral.csproj", "{032ED958-A220-4072-95B1-2C17671FF15A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPagesProject.Models", "RazorPagesProject.Models\RazorPagesProject.Models.csproj", "{9704E128-D9AF-4651-ABF7-7E46DA71106F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPagesProject.Models", "RazorPagesProject.Models\RazorPagesProject.Models.csproj", "{9704E128-D9AF-4651-ABF7-7E46DA71106F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPagesProject.Services", "RazorPagesProject.Services\RazorPagesProject.Services.csproj", "{D80149CF-0465-4417-9618-3F37AD97AB1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPagesProject.Services", "RazorPagesProject.Services\RazorPagesProject.Services.csproj", "{D80149CF-0465-4417-9618-3F37AD97AB1A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

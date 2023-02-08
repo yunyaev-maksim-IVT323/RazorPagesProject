@@ -9,18 +9,37 @@ namespace RazorPagesProject.Services
 {
     public class MockImageRepository : IImageRepository
     {
-        private List<Image> ImageList;
+        private List<Image> _imageList;
         public MockImageRepository() 
         {
-            ImageList = new List<Image>()
+            _imageList = new List<Image>()
             {
                 new Image() { Id = 0, Path = "truba1.png"},
                 new Image() { Id = 1, Path = "truba2.jpg" },
             };
         }
+
         public IEnumerable<Image> GetAllImages()
         {
-            return ImageList;
+            return _imageList;
         }
+        public Image GetImage(int id)
+        {
+            return _imageList.FirstOrDefault(i => i.Id == id);
+        }
+
+        // Метод добавления картинки
+        public Image AddImage(Image newImage)
+        {
+            if (_imageList.Count > 0)
+            {
+                newImage.Id = _imageList.Max(i => i.Id) + 1;
+            }
+            else newImage.Id = 0; //?
+
+            _imageList.Add(newImage);
+            return newImage;
+        }
+        
     }
 }

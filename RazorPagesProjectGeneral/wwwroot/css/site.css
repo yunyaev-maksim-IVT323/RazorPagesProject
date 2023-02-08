@@ -19,14 +19,13 @@ body {
 
 /////////
 
-#containerr {
+
+#qwe {
     display: flex;
     justify-content: space-between;
     box-shadow: 0 0 5px inset black;
     overflow-x: scroll;
-    background: red;
-    background-color: aquamarine;
-    
+    background-color: antiquewhite;
     /*скрыть полосу прокрутки*/
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -57,7 +56,13 @@ img {
 button {
     color: orangered;
 }
-
-.qwe {
-    background-color: navy;
+#qwe {
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    box-shadow: 0 0 5px inset black;
+    overflow-x: scroll;
+    background-color: antiquewhite;
+    /*скрыть полосу прокрутки*/
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
