@@ -12,5 +12,6 @@ namespace RazorPagesProject.Services
         public IEnumerable<Image> GetAllImages();
         public Image GetImage(int id);
         public Image AddImage(Image newImage);
+        public Image DeleteImage(int id);
     }
 }

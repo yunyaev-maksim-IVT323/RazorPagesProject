@@ -40,6 +40,16 @@ namespace RazorPagesProject.Services
             _imageList.Add(newImage);
             return newImage;
         }
-        
+
+        // Метод удаления картинки
+        public Image DeleteImage(int id)
+        {
+            Image imageDelete = _imageList.FirstOrDefault(x => x.Id == id);
+            if (imageDelete != null)
+            {
+                _imageList.Remove(imageDelete);
+            }
+            return imageDelete;
+        }
     }
 }

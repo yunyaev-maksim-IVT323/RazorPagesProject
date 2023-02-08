@@ -1,0 +1,26 @@
+﻿@page "{id}"
+@model RazorPagesProjectGeneral.Pages.Images.DeleteModel
+@{
+    ViewData["Title"] = "Delete";
+}
+<h1 class="text-center">Подтверждение удаления</h1>
+<div class="alert-danger">
+    <div class="row">
+        @{var photoPath = $"/all_images/{Model.Image.Path}";}
+        <div class="col-12 col-md-6 col-xl-4 offset-sm-0 offset-md-3 offset-xl-4">
+            <div class="text-center text-secondary">
+                <img src="@photoPath">
+            </div>
+        </div>
+    </div>
+
+<div class="row">
+    <div class="col text-center">
+        <h4>Вы уверены что хотите удалить изображение?</h4>
+        <form method="post">
+            <button type="submit" class="btn btn-danger">Да</button>
+            <a asp-page="/Images/Images" class="btn btn-success">Нет</a>
+        </form>
+    </div>
+</div>
+</div>

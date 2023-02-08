@@ -11,6 +11,7 @@
     /*@foreach (var img in Model.Images)
     {
         var photoPath = $"/all_images/{img.Path}";
+        
         <img src="photoPath" class="bead">
 
         <div class="col-12">
@@ -29,16 +30,17 @@
     @foreach (var img in Model.Images)
     {
         var photoPath = $"/all_images/{img.Path}";
-        <div class="col-2">       
+        var idid = $"ID: {img.Id}";
+            <div class="col-2">       
                 <div class="card m-1 ">
                     <div class="card-header text-center">
-
+                        <label>@idid</label>
                     </div>
                     <div class="text-center">
                         <img src="@photoPath" class="bead">
                     </div>
                     <div class="card-footer text-center">
-                        <a href="#" class="btn btn-danger btn-sm ">Удалить</a>
+                        <a asp-page="/Images/Delete" asp-route-Id="@img.Id" class="btn btn-danger btn-sm ">Удалить</a>
                     </div>
                 </div>
         </div>
