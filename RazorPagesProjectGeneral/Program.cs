@@ -3,16 +3,19 @@ using RazorPagesProject.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Внедряем зависимость реальной бд
+// Внедряем зависимость контекста данных в виде сервиса
 builder.Services.AddDbContextPool<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("ImageDBConnection"));
 });
 // Add services to the container.
 builder.Services.AddRazorPages();
-// Внедряем зависимости интерфейса и псевдобазы данных
-builder.Services.AddSingleton<IImageRepository, MockImageRepository>();
 
+// Внедряем зависимости интерфейса и псевдобазы данных
+//builder.Services.AddSingleton<IImageRepository, MockImageRepository>();
+
+//Внедряем зависимость интерфейса и реализации реальной базы данных
+builder.Services.AddScoped<IImageRepository, SQLImageRepository>();
 
 var app = builder.Build();
 

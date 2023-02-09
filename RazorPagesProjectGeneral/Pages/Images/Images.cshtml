@@ -30,11 +30,11 @@
     @foreach (var img in Model.Images)
     {
         var photoPath = $"/all_images/{img.Path}";
-        var idid = $"ID: {img.Id}";
+        /*var idid = $"ID: {img.Id}";*/
             <div class="col-2">       
                 <div class="card m-1 ">
                     <div class="card-header text-center">
-                        <label>@idid</label>
+                        <!--<label>"idid"</label>-->
                     </div>
                     <div class="text-center">
                         <img src="@photoPath" class="bead">
