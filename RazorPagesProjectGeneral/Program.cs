@@ -1,11 +1,19 @@
+using Microsoft.EntityFrameworkCore;
 using RazorPagesProject.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Внедряем зависимость реальной бд
+builder.Services.AddDbContextPool<AppDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ImageDBConnection"));
+});
 // Add services to the container.
 builder.Services.AddRazorPages();
 // Внедряем зависимости интерфейса и псевдобазы данных
 builder.Services.AddSingleton<IImageRepository, MockImageRepository>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
