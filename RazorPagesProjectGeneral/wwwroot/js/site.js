@@ -5,6 +5,11 @@
 let bead = document.querySelectorAll('.bead'); // переменная хранит список элементов с классом bead
 let playa = document.querySelector('#playa'); // переменная хранит элемент playa
 
+/*for (let i = 0; i < localStorage.length; i++) {
+    let key = localStorage.key(i);
+    localStorage.getItem(key);
+};*/
+
 
 
 let flag = false, imgClone = null;
@@ -70,11 +75,25 @@ function saveCoord() {
     let mas = [];
     for (var i = 0; i < clons.length; i++) {
         mas[i] = [clons[i].x, clons[i].y];
-        //place += '<div>' + mas[i] + '</div>';
         place += '<div>' + "X: " + mas[i][0] + ' '+ "Y: " + mas[i][1] + '</div>';
         //place += '<div>' + clons[i].x + ' ' + clons[i].y + '</div>';
         vivod.innerHTML = place;
-        //document.write(clons[i].x, clons[i].y);
     }
-    //info.innerHTML = place;
+
+    for (var i = 0; i < clons.length; i++) {
+        localStorage.setItem('clon' + i, clons[i]); // сохраняем в локальное хранилище
+    }
+    //for (var i = 0; i < clons.length; i++) {
+    //    if (localStorage.getItem('clon' + i)) clons[i].innerHTML = localStorage.getItem('clon' + i);
+    //};
 }
+
+function getSave() {
+    for (let i = 0; i < localStorage.length; i++) {
+        let key = localStorage.key(i);
+        playa.innerHTML += localStorage.getItem(key);
+    };
+
+}
+
+
